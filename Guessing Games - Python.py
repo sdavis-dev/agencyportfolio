@@ -1,6 +1,7 @@
 import random
 
 randNumGen = random.randint(1,100)
+
 while True:
     print("Guess a number between 1 and 100 (or type 'quit' to give up)")
     playerGuess = int(input())
