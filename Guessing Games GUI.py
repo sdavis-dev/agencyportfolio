@@ -12,6 +12,9 @@ playerGuess = tk.IntVar()
 playerGuessEntry = ttk.Entry(root, width = 10, textvariable = playerGuess)
 playerGuessEntry.grid(row = 1, column = 0, columnspan = 5)
 
+submitGuessBtn = tk.Button(root, text="Submit Guess", command = playerGuess)
+submitGuessBtn.grid(row=2, column=0, columnspan=5)
+
 
 
 root.mainloop()
