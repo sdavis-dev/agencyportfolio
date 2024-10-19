@@ -8,5 +8,9 @@ randNumGen = random.randint(1,1000)
 gameAnswer = randNumGen
 
 if playerGuess > gameAnswer:
-    print("Wrong Answer!Try again!")
+    print("Wrong Answer!Guess a lower number Try again.")
+elif playerGuess < gameAnswer:
+    print("Wrong Answer!Guess a higher number Try again.")
+else:
+     print("Congrats you guessed the right Number!!!")
 
