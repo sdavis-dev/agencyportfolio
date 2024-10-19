@@ -1,16 +1,23 @@
 import random
-print("Guess a number between 1 and 100")
-playerGuess = input()
-#>>>>>>> 7dc299db3ac005da4fa8b22c8f7e4053c72eaa20
-#<<<<<<< HEAD
-randNumGen = random.randint(1,1000)
+while True:
+    print("Guess a number between 1 and 100 (or type 'quit' to give up)")
+    playerGuess = input()
 
-gameAnswer = randNumGen
+    randNumGen = random.randint(1,100)
 
-if playerGuess > gameAnswer:
-    print("Wrong Answer!Guess a lower number Try again.")
-elif playerGuess < gameAnswer:
-    print("Wrong Answer!Guess a higher number Try again.")
-else:
-     print("Congrats you guessed the right Number!!!")
+    gameAnswer = randNumGen
+
+    if playerGuess == "quit":
+        print("You gave up! the number was ", gameAnswer)
+
+    playerGuess = int(playerGuess)
+
+    if playerGuess > gameAnswer:
+        print("Wrong Answer!Guess a lower number Try again.")
+    elif playerGuess < gameAnswer:
+        print("Wrong Answer!Guess a higher number Try again.")
+    elif playerGuess == gameAnswer:
+        print("Congrats you guessed the right Number!!!")
+    else:
+        print("Please enter a valid number")
 
