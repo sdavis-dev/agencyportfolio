@@ -80,3 +80,8 @@ span{
    height: 150px;
    width: 200px;
 }
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
