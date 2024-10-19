@@ -23,6 +23,8 @@ def random():
         resultLabel.config(text="Wrong Answer! Guess a lower number Try again.") # Configure label to print text
     elif playerGuess.get() < gameAnswer:
         resultLabel.config(text="Wrong Answer! Guess a higher number Try again.") # Configure label to print text
+    elif playerGuess.get() < 1 or playerGuess.get() > 100:
+        resultLabel.config(text="Wrong Answer! Guess between 1-100. Try again.") # Configure label to print text
 
 # Label to display if player guess is right or wrong
 resultLabel = ttk.Label(root, text="")
