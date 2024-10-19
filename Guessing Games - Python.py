@@ -15,12 +15,10 @@ while True:
     if playerGuess == gameAnswer:
         print("Congrats you guessed the right Number!!!")
         break
-
-    while playerGuess != gameAnswer:
-        if playerGuess > gameAnswer:
-            print("Wrong Answer!Guess a lower number Try again.")
-        elif playerGuess < gameAnswer:
-            print("Wrong Answer!Guess a higher number Try again.")
-        else:
-            print("Please enter a valid number")
+    elif playerGuess > gameAnswer:
+        print("Wrong Answer!Guess a lower number Try again.")
+    elif playerGuess < gameAnswer:
+        print("Wrong Answer!Guess a higher number Try again.")
+    else:
+        print("Please enter a valid number")
 
