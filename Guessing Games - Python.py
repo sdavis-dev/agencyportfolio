@@ -1,16 +1,14 @@
 import random
+
+randNumGen = random.randint(1,100)
 while True:
     print("Guess a number between 1 and 100 (or type 'quit' to give up)")
-    playerGuess = input()
-
-    randNumGen = random.randint(1,100)
+    playerGuess = int(input())
 
     gameAnswer = randNumGen
 
     if playerGuess == "quit":
         print("You gave up! the number was ", gameAnswer)
-
-    playerGuess = int(playerGuess)
 
     if playerGuess > gameAnswer:
         print("Wrong Answer!Guess a lower number Try again.")
