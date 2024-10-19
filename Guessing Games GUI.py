@@ -16,22 +16,23 @@ playerGuessEntry.grid(row = 1, column = 0, columnspan = 5)
 # Random function to create random number and guess functionality
 randNumGen = random.randint(1, 100)
 gameAnswer = randNumGen
-def random():
-    if playerGuess.get() == gameAnswer:
+def checkGuess():
+    if playerGuess.get() < 1 or playerGuess.get() > 100:
+        resultLabel.config(text="Wrong Answer! Guess between 1-100. Try again.") # Configure label to print text
+    elif playerGuess.get() == gameAnswer:
         resultLabel.config(text="Congrat you guessed the right Number!!!") # Configure label to print text
     elif playerGuess.get() > gameAnswer:
         resultLabel.config(text="Wrong Answer! Guess a lower number Try again.") # Configure label to print text
     elif playerGuess.get() < gameAnswer:
         resultLabel.config(text="Wrong Answer! Guess a higher number Try again.") # Configure label to print text
-    elif playerGuess.get() < 1 or playerGuess.get() > 100:
-        resultLabel.config(text="Wrong Answer! Guess between 1-100. Try again.") # Configure label to print text
+    
 
 # Label to display if player guess is right or wrong
 resultLabel = ttk.Label(root, text="")
 resultLabel.grid(row = 3, column = 0, columnspan = 5)
 
 #This is for the button to submit the player's guess
-submitGuessBtn = tk.Button(root, text="Submit Guess", command = random)
+submitGuessBtn = tk.Button(root, text="Submit Guess", command = checkGuess)
 submitGuessBtn.grid(row=2, column=0, columnspan=5)
 
 
