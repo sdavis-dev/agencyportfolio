@@ -10,13 +10,17 @@ while True:
 
     if playerGuess == "quit":
         print("You gave up! the number was ", gameAnswer)
+        break
 
-    if playerGuess > gameAnswer:
-        print("Wrong Answer!Guess a lower number Try again.")
-    elif playerGuess < gameAnswer:
-        print("Wrong Answer!Guess a higher number Try again.")
-    elif playerGuess == gameAnswer:
+    if playerGuess == gameAnswer:
         print("Congrats you guessed the right Number!!!")
-    else:
-        print("Please enter a valid number")
+        break
+
+    while playerGuess != gameAnswer:
+        if playerGuess > gameAnswer:
+            print("Wrong Answer!Guess a lower number Try again.")
+        elif playerGuess < gameAnswer:
+            print("Wrong Answer!Guess a higher number Try again.")
+        else:
+            print("Please enter a valid number")
 
