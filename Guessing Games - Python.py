@@ -16,6 +16,7 @@ while True:
         playerGuess = int(playerGuess)
     except ValueError:
         print("Please enter valid number")
+        continue
 
     if playerGuess == gameAnswer:
         print("Congrats you guessed the right Number!!!")
