@@ -4,14 +4,16 @@ import random
 
 root = tk.Tk()
 root.title('Guessing Games')
-root.geometry("325x200")
+root.geometry("400x400")
 
-guessStatement = ttk.Label(root, text="Guess a number between 1 and 100 (or click 'quit' to give up)")
-guessStatement.grid(row = 0, column = 0, columnspan= 5)
+root.grid_columnconfigure(0, weight=1)
+
+guessStatement = ttk.Label(root, text="Guess a number between 1 and 100")
+guessStatement.grid(row = 0, column = 0, columnspan = 1)
 
 playerGuess = tk.IntVar()
 playerGuessEntry = ttk.Entry(root, width = 10, textvariable = playerGuess)
-playerGuessEntry.grid(row = 1, column = 0, columnspan = 5)
+playerGuessEntry.grid(row = 1, column = 0, columnspan = 1)
 
 # Random function to create random number and guess functionality
 randNumGen = random.randint(1, 100)
@@ -29,11 +31,14 @@ def checkGuess():
 
 # Label to display if player guess is right or wrong
 resultLabel = ttk.Label(root, text="")
-resultLabel.grid(row = 3, column = 0, columnspan = 5)
+resultLabel.grid(row = 2, column = 0, columnspan = 1)
 
 #This is for the button to submit the player's guess
 submitGuessBtn = tk.Button(root, text="Submit Guess", command = checkGuess)
-submitGuessBtn.grid(row=2, column=0, columnspan=5)
+submitGuessBtn.grid(row=3, column=0, columnspan=1)
+
+quitBtn = tk.Button(root, text = "Quit", command = root.quit)
+quitBtn.grid(row=4, column=0, columnspan=1)
 
 
 root.mainloop()
