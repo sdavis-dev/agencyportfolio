@@ -35,7 +35,6 @@ def checkGuess():
         resultLabel.config(text="Wrong Answer! Guess a lower number Try again.") # Configure label to print text
     elif playerGuess.get() < gameAnswer:
         resultLabel.config(text="Wrong Answer! Guess a higher number Try again.") # Configure label to print text
-        playerGuess.set('')
     
 
 # Label to display if player guess is right or wrong
