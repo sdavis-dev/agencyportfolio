@@ -47,9 +47,11 @@ resultLabel.grid(row = 2, column = 0, columnspan = 1)
 submitGuessBtn = tk.Button(root, text="Submit Guess", command = checkGuess)
 submitGuessBtn.grid(row=3, column=0, columnspan=1)
 
+#The code for the button so the player can quit the game
 quitBtn = tk.Button(root, text = "Quit", command = root.quit)
 quitBtn.grid(row=4, column=0)
 
+#This is for the restart button for button to be hidden til the right number is guessed
 restartBtn = tk.Button(root, text = "Restart", command = restartGame)
 restartBtn.grid(row= 5, column= 0)
 restartBtn.grid_remove()
