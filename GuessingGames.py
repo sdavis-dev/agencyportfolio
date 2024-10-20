@@ -15,6 +15,7 @@ playerGuess = tk.IntVar()
 playerGuessEntry = ttk.Entry(root, width = 10, textvariable = playerGuess)
 playerGuessEntry.grid(row = 1, column = 0, columnspan = 1)
 
+#Function to restart the game
 def restartGame():
     global gameAnswer
     gameAnswer = random.randint(1, 100)
@@ -25,12 +26,13 @@ def restartGame():
 # Random function to create random number and guess functionality
 randNumGen = random.randint(1, 100)
 gameAnswer = randNumGen
+
 def checkGuess():
     if playerGuess.get() < 1 or playerGuess.get() > 100:
         resultLabel.config(text="Wrong Answer! Guess between 1-100. Try again.") # Configure label to print text
     elif playerGuess.get() == gameAnswer:
         resultLabel.config(text="Congrat you guessed the right Number!!!") # Configure label to print text
-        restartBtn.grid(row= 5, column= 0)
+        restartBtn.grid(row= 5, column= 0) # Restart button appears when correct number is guessed 
     elif playerGuess.get() > gameAnswer:
         resultLabel.config(text="Wrong Answer! Guess a lower number Try again.") # Configure label to print text
     elif playerGuess.get() < gameAnswer:
