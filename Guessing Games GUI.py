@@ -15,6 +15,13 @@ playerGuess = tk.IntVar()
 playerGuessEntry = ttk.Entry(root, width = 10, textvariable = playerGuess)
 playerGuessEntry.grid(row = 1, column = 0, columnspan = 1)
 
+def restartGame():
+    global gameAnswer
+    gameAnswer = random.randint(1, 100)
+    playerGuess.set(0)
+    resultLabel.config(text="")
+    restartBtn.grid_forget()
+
 # Random function to create random number and guess functionality
 randNumGen = random.randint(1, 100)
 gameAnswer = randNumGen
@@ -23,10 +30,12 @@ def checkGuess():
         resultLabel.config(text="Wrong Answer! Guess between 1-100. Try again.") # Configure label to print text
     elif playerGuess.get() == gameAnswer:
         resultLabel.config(text="Congrat you guessed the right Number!!!") # Configure label to print text
+        restartBtn.grid(row= 5, column= 0)
     elif playerGuess.get() > gameAnswer:
         resultLabel.config(text="Wrong Answer! Guess a lower number Try again.") # Configure label to print text
     elif playerGuess.get() < gameAnswer:
         resultLabel.config(text="Wrong Answer! Guess a higher number Try again.") # Configure label to print text
+        playerGuess.set('')
     
 
 # Label to display if player guess is right or wrong
@@ -38,7 +47,10 @@ submitGuessBtn = tk.Button(root, text="Submit Guess", command = checkGuess)
 submitGuessBtn.grid(row=3, column=0, columnspan=1)
 
 quitBtn = tk.Button(root, text = "Quit", command = root.quit)
-quitBtn.grid(row=4, column=0, columnspan=1)
+quitBtn.grid(row=4, column=0)
 
+restartBtn = tk.Button(root, text = "Restart", command = restartGame)
+restartBtn.grid(row= 5, column= 0)
+restartBtn.grid_remove()
 
 root.mainloop()
