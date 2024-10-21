@@ -1,3 +1,6 @@
+* {
+    background-color: #eae3c9;
+}
 h1 {
     text-align: center;
 }
@@ -10,7 +13,7 @@ h1 {
 }
 
 header {
-    background-color: gray;
+    background-color: none;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -35,6 +38,6 @@ header {
     transition: background-color 0.3s;
 }
 
-.nav-links li a:hover {
-    background-color: red;
+.navbar li a:hover {
+    background-color: #ffd700;
 }
