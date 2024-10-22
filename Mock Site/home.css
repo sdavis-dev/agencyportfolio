@@ -75,7 +75,8 @@ p {
 }
 
 #description {
-    text-align: center;
+    text-align: cent;
+    font-size: 18px;
 }
 
 .contact {
