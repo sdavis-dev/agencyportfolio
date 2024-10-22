@@ -85,3 +85,24 @@ p {
     justify-content: center; /* Centers the map horizontally */
     margin: 20px 0;          /* Optional: Adds space above and below the map */
 }
+
+content-container {
+    display: flex;
+    justify-content: space-between; /* Ensures there is space between text and image */
+    align-items: center; /* Vertically centers both the text and image */
+    width: 100%; /* Full width of the container */
+    padding: 20px;
+}
+
+.text-content {
+    width: 100%; /* Adjust this to control the size of the text container */
+    text-align: left;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: 1%; /* Adjust to control how far from the right it is */
+    width: 20%; /* Adjust this based on the size of your image */
+    height: auto;
+}
