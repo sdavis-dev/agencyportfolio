@@ -86,23 +86,20 @@ p {
     margin: 20px 0;          /* Optional: Adds space above and below the map */
 }
 
-content-container {
-    display: flex;
-    justify-content: space-between; /* Ensures there is space between text and image */
-    align-items: center; /* Vertically centers both the text and image */
-    width: 100%; /* Full width of the container */
-    padding: 20px;
-}
-
-.text-content {
-    width: 100%; /* Adjust this to control the size of the text container */
-    text-align: left;
-}
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: 1%; /* Adjust to control how far from the right it is */
-    width: 20%; /* Adjust this based on the size of your image */
-    height: auto;
-}
+.content-container {
+    display: flex;               /* Align items in a row */
+    align-items: flex-start;      /* Aligns items at the top */
+    justify-content: flex-start;  /* Ensures the items stay close to each other */
+    gap: 80%;                    /* Adds space between the text and image */
+    padding: 20px;                /* Optional padding for the container */
+  }
+  
+  .text-content {
+    max-width: 60%;               /* Set the max width of the text section */
+  }
+  
+  .coffee-image {
+    width: 225px;                   /* Adjust the width of the image */
+    height: 300px;               /* Maintain the aspect ratio */
+    object-fit: cover;
+  }
