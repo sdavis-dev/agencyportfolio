@@ -90,16 +90,17 @@ p {
     display: flex;               /* Align items in a row */
     align-items: flex-start;      /* Aligns items at the top */
     justify-content: flex-start;  /* Ensures the items stay close to each other */
-    gap: 80%;                    /* Adds space between the text and image */
+    gap: 50%;                    /* Adds space between the text and image */
     padding: 20px;                /* Optional padding for the container */
   }
   
   .text-content {
-    max-width: 60%;               /* Set the max width of the text section */
+    width: 60%;               /* Set the max width of the text section */
+    height: auto;
   }
   
   .coffee-image {
-    width: 225px;                   /* Adjust the width of the image */
-    height: 300px;               /* Maintain the aspect ratio */
+    width: 15%;                   /* Adjust the width of the image */
+    height: 10;               /* Maintain the aspect ratio */
     object-fit: cover;
   }
