@@ -45,8 +45,8 @@ header {
 
 #menu-header{
     color: #A67B5B; /* Rustic Brown for the header */
-    font-size: 36px; /* Adjust font size as needed */
-    text-align: left; /* Optional: Centers the header */
+    font-size: 45px; /* Adjust font size as needed */
+    text-align: center; /* Optional: Centers the header */
     margin-bottom: 10px; /* Optional: Adds space below the header */
 }
 
@@ -86,21 +86,12 @@ p {
     margin: 20px 0;          /* Optional: Adds space above and below the map */
 }
 
-.content-container {
-    display: flex;               /* Align items in a row */
-    align-items: flex-start;      /* Aligns items at the top */
-    justify-content: flex-start;  /* Ensures the items stay close to each other */
-    gap: 50%;                    /* Adds space between the text and image */
-    padding: 20px;                /* Optional padding for the container */
-  }
-  
-  .text-content {
-    width: 60%;               /* Set the max width of the text section */
-    height: auto;
-  }
-  
-  .coffee-image {
-    width: 15%;                   /* Adjust the width of the image */
-    height: 10;               /* Maintain the aspect ratio */
-    object-fit: cover;
-  }
+h3 {
+    color: #556B2F;
+    text-align: center;
+}
+
+#menu {
+    text-align: center;
+    font-size: 20px;
+} 
