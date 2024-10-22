@@ -80,7 +80,7 @@ p {
     text-align: center;
 }
 
-.google-map {
+.google-map { /* for google map */
     display: flex;
     justify-content: center; /* Centers the map horizontally */
     margin: 20px 0;          /* Optional: Adds space above and below the map */
