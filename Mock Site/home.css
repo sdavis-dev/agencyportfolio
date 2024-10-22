@@ -6,6 +6,8 @@ h2 {
     color: #A67B5B;
 }
 
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -94,13 +96,17 @@ p {
     padding: 20px;                /* Optional padding for the container */
   }
   
-  .text-content {
+.text-content {
     width: 60%;               /* Set the max width of the text section */
     height: auto;
-  }
+}
   
-  .coffee-image {
+.coffee-image {
     width: 15%;                   /* Adjust the width of the image */
     height: 10;               /* Maintain the aspect ratio */
     object-fit: cover;
-  }
+}
+
+#aboutUs {
+    text-align: center;
+}
