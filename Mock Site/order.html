@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Milk & Honey</title>
+<link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <header>
+      <img src="M&H_logo.jpg" alt="Milk & Honey Café Logo" class="logo">
+      <div class="container">
+        <h1></h1>
+        <nav>
+            <ul class="navbar">
+               <li><a href="home.html">Home</a></li>
+               <li><a href="menu.html">Menu</a></li>
+               <li><a href="aboutUs.html">About Us</a></li>
+               <li><a href="contact.html">Contact</a></li>
+               <li><a href="order.html" class="order-btn">Order Online</a></li>
+           </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Online Order Form</h1>
+      <form id="order-form" action="process_order.php" method="POST"> <!-- Specify action and method -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <h2>Coffee & Beverages ☕</h2>
+          <label for="espresso">Espresso ($3.50)</label>
+          <input type="number" id="espresso" name="espresso" min="0" value="0">
+
+          <label for="cappuccino">Cappuccino ($4.00)</label>
+          <input type="number" id="cappuccino" name="cappuccino" min="0" value="0">
+
+          <label for="latte">Latte ($4.50)</label>
+          <input type="number" id="latte" name="latte" min="0" value="0">
+
+          <label for="honey-cinnamon-latte">Honey Cinnamon Latte ($5.00)</label>
+          <input type="number" id="honey-cinnamon-latte" name="honey_cinnamon_latte" min="0" value="0">
+
+          <label for="herbal-teas">Herbal Teas ($3.00)</label>
+          <input type="number" id="herbal-teas" name="herbal_teas" min="0" value="0">
+
+          <h2>Breakfast 🥞</h2>
+          <label for="avocado-toast">Avocado Toast ($6.50)</label>
+          <input type="number" id="avocado-toast" name="avocado_toast" min="0" value="0">
+
+          <label for="yogurt-bowl">Honey Drizzled Yogurt Bowl ($7.00)</label>
+          <input type="number" id="yogurt-bowl" name="yogurt_bowl" min="0" value="0">
+
+          <label for="breakfast-croissant">Breakfast Croissant ($5.50)</label>
+          <input type="number" id="breakfast-croissant" name="breakfast_croissant" min="0" value="0">
+
+          <label for="oatmeal">Oatmeal with Fresh Fruit ($5.00)</label>
+          <input type="number" id="oatmeal" name="oatmeal" min="0" value="0">
+
+          <label for="pancakes">Pancakes with Honey & Berries ($8.00)</label>
+          <input type="number" id="pancakes" name="pancakes" min="0" value="0">
+
+          <h2>Lunch/Dinner 🍽️</h2>
+          <label for="grilled-cheese">Grilled Cheese & Tomato Soup ($9.00)</label>
+          <input type="number" id="grilled-cheese" name="grilled_cheese" min="0" value="0">
+
+          <label for="quinoa-salad">Quinoa & Avocado Salad ($8.50)</label>
+          <input type="number" id="quinoa-salad" name="quinoa_salad" min="0" value="0">
+
+          <label for="chicken-wrap">Honey Glazed Chicken Wrap ($10.00)</label>
+          <input type="number" id="chicken-wrap" name="chicken_wrap" min="0" value="0">
+
+          <label for="vegan-pesto">Vegan Pesto Pasta ($9.50)</label>
+          <input type="number" id="vegan-pesto" name="vegan_pesto" min="0" value="0">
+
+          <label for="veggie-sandwich">Roasted Veggie Sandwich ($8.00)</label>
+          <input type="number" id="veggie-sandwich" name="veggie_sandwich" min="0" value="0">
+
+          <h2>Desserts 🍰</h2>
+          <label for="honey-cake">Honey Cake ($6.00)</label>
+          <input type="number" id="honey-cake" name="honey_cake" min="0" value="0">
+
+          <label for="lavender-macarons">Lavender Macarons ($5.00)</label>
+          <input type="number" id="lavender-macarons" name="lavender_macarons" min="0" value="0">
+
+          <label for="cookies">Chocolate Chip Cookies ($3.00)</label>
+          <input type="number" id="cookies" name="cookies" min="0" value="0">
+
+          <label for="cheesecake">Cheesecake with Honey Drizzle ($7.00)</label>
+          <input type="number" id="cheesecake" name="cheesecake" min="0" value="0">
+
+          <label for="cinnamon-rolls">Cinnamon Rolls ($4.50)</label>
+          <input type="number" id="cinnamon-rolls" name="cinnamon_rolls" min="0" value="0">
+
+          <label for="special-requests">Special Requests:</label>
+          <textarea id="special-requests" name="special_requests" rows="4" placeholder="Any special requests?"></textarea>
+
+          <button type="submit">Place Order</button>
+      </form>
+  </div>
+</body>
+</html>
