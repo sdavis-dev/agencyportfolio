@@ -3,6 +3,7 @@
 <head>
 <title>Milk & Honey</title>
 <link rel="stylesheet" href="home.css">
+<script src="home.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
     </header>
     <div class="container">
       <h1>Online Order Form</h1>
-      <form id="order-form" action="process_order.php" method="POST"> <!-- Specify action and method -->
+      <form id="order-form" onsubmit="return calculateTotal(event)"> <!-- Specify action and method -->
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
 
